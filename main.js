@@ -1,26 +1,23 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
 });
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}))
-document.addEventListener("scroll", () => {
-  const nav = document.querySelector("nav");
-  if(window.scrollY > 0) {
-    nav.classList.add("scrolled");
+document.querySelectorAll('.nav-link').forEach((n) =>
+  n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  })
+);
+document.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 0) {
+    nav.classList.add('scrolled');
   } else {
-    nav.classList.remove("scrolled");
+    nav.classList.remove('scrolled');
   }
-})
-
-let loader = document.querySelector("#preloader");
-window.addEventListener("load", () => {
-  loader.style.display = "none";
-})
+});
 
 /*=============== GSAP ANIMATION ===============*/
 TweenMax.from('.home_title', 1, {
@@ -106,4 +103,3 @@ $(function () {
   // animate on scroll
   new WOW().init();
 });
-
