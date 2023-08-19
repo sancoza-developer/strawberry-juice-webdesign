@@ -45,7 +45,7 @@
 }
 html {
   scroll-behavior: smooth;
- scroll-padding: 110px;
+  scroll-padding: 100px;
 }
 body {
   font-family: var(--fonst-poppins);
@@ -64,6 +64,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 .container {
   max-width: 1366px;
@@ -98,8 +99,6 @@ nav.scrolled {
   opacity: 0.98;
 }
 .navbar {
-  width: 100%;
-  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,7 +107,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 .nav-menu li a {
   color: var(--first-color);
@@ -122,7 +121,7 @@ nav.scrolled {
   gap: 0;
 }
 .navbar .logo img {
-  height: 50px;
+  height: 35px;
 }
 .hamburger {
   display: none;
@@ -176,6 +175,7 @@ nav.scrolled {
 }
 /* =============== SHOWCASE =============== */
 .showcase {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -308,6 +308,7 @@ nav.scrolled {
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
+  overflow: hidden;
 }
 .home_shape-small {
   width: 200px;
@@ -346,8 +347,8 @@ nav.scrolled {
 .home_shape-big {
   background-color: hsl(2, 100%, 88%);
   position: absolute;
-border-radius: 50%;
-filter: blur(60px);
+  border-radius: 50%;
+  filter: blur(60px);
 }
 .home_shape-small {
   width: 200px;
@@ -362,13 +363,13 @@ filter: blur(60px);
   right: -8rem;
 }
 .home_shape-bg {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-mix-blend-mode: soft-light;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: soft-light;
 }
 /*=============== Scorll Text ===============*/
 main {
@@ -379,7 +380,6 @@ main {
 .scroll {
   width: 100%;
   display: flex;
-  width: 100%;
   height: auto;
   background: #fed45c;
 }
